@@ -51,6 +51,7 @@ class _MyAppState extends State<MyApp> {
       _songs = songs1;
     });
 
+    print(_platformVersion);
     print(_songs);
   }
 
