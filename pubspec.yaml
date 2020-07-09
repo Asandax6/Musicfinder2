@@ -1,11 +1,13 @@
 name: musicfinder2
 description: A new Flutter project.
 version: 0.0.1
-author: Asanda Ndimande <asandax6@gmail.com>
+#author: Asanda Ndimande <asandax6@gmail.com>
 homepage: https://www.github.com/Asandax6/musicfinder2
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.1.0 <3.0.0"
+  flutter: ">=1.12.0 <2.0.0"
+
 
 dependencies:
   flutter:
@@ -20,5 +22,9 @@ dev_dependencies:
 
 flutter:
   plugin:
-    androidPackage: com.asanda.musicfinder2
-    pluginClass: MusicfinderPlugin
+    platforms:
+      android:
+        package: com.asanda.musicfinder2
+        pluginClass: MusicfinderPlugin
+      ios:
+        pluginClass: MusicfinderPlugin

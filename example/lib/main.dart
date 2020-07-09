@@ -61,8 +61,21 @@ class _MyAppState extends State<MyApp> {
         appBar: new AppBar(
           title: new Text('Plugin example app'),
         ),
-        body: new Center(
-          child: new Text('Running on: $_platformVersion\n'),
+        body: new Column(
+          children: <Widget>[
+            ListView.builder(
+              itemCount: _songs.length,
+              itemBuilder: (context, index) {
+                final item = _songs[index].title;
+                return Card(
+                  child: ListTile(
+                    title: Text(item),
+                    trailing: Icon(Icons.more_vert),
+                  ),
+                );
+              },
+            )
+          ],
         ),
       ),
     );
